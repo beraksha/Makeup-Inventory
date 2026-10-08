@@ -6,6 +6,8 @@ You can add, edit and delete products, each with a brand, type, status (new, in 
 
 I built it with React and Vite and styled it with SCSS: variables, partials, a mixin for breakpoints and a map that sets each category's accent color. The code is split into small components (filter bar, product card, product form) and a custom useLocalStorage hook. The layout is responsive from phone to desktop, the form uses a native `<dialog>` element so keyboard focus and Escape work properly, and every button and field has an accessible label.
 
+> Update: Packaged the app as a cross-platform desktop application with Electron.
+
 ## Features
 
 - Add, edit and delete products
@@ -16,9 +18,20 @@ I built it with React and Vite and styled it with SCSS: variables, partials, a m
 
 ## Run it locally
 
+1. via `vite`
+
 ```bash
 npm install
 npm run dev
+npm run build
+```
+
+2. via `electron`
+
+```bash
+npm install -D electron concurrently wait-on cross-env
+npm run electron:dev
+npm run electron:start
 ```
 
 Build for production with `npm run build`; the output goes to `dist/` and can be deployed to Vercel, Netlify or GitHub Pages.
@@ -36,7 +49,7 @@ src/
 
 ## Tech
 
-React 18, Vite, plain CSS.
+React 18, Vite, Electron, SCSS, plain CSS.
 
 ## Ideas for later
 
