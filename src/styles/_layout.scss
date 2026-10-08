@@ -1,0 +1,67 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @include small-screen {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: $surface;
+  border: 1px solid $line;
+  border-radius: 999px;
+}
+
+.tab {
+  border: 0;
+  background: none;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font: inherit;
+  color: $ink;
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    background: $ink;
+    color: #fff;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.empty {
+  padding: 2rem;
+  text-align: center;
+  color: $muted;
+  border: 1px dashed $line;
+  border-radius: $radius;
+}

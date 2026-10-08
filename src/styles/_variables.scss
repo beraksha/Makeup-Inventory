@@ -1,0 +1,24 @@
+// Colors
+$bg: #f7f3f6;
+$surface: #ffffff;
+$ink: #2b2030;
+$muted: #6d6172;
+$line: #e4dbe6;
+$berry: #8a2c5b;
+$sage: #4f7a65;
+$warn: #9a5b00;
+$danger: #a3262a;
+
+// Shape and type
+$radius: 10px;
+$font-body: "Figtree", system-ui, sans-serif;
+$font-heading: "Fraunces", Georgia, serif;
+
+// Layout
+$breakpoint-sm: 520px;
+
+// Category class name -> accent color used on the product card
+$categories: (
+  "makeup": $berry,
+  "skincare": $sage,
+);

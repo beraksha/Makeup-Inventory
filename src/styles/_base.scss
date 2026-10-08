@@ -1,0 +1,40 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  line-height: 1.5;
+  color: $ink;
+  background: $bg;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: 600;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+}
+
+:focus-visible {
+  outline: 3px solid $berry;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  @include visually-hidden;
+}
+
+.muted {
+  color: $muted;
+  margin: 0.25rem 0 0;
+}
